@@ -116,7 +116,7 @@ class timout:
 
 class borgBackup:
     def __init__(self, args):
-        self.pathToRepos = args.repopath[0]
+        self.pathToRepos = args.r
         self.pathToBorg = args.b
         self.compType = args.c
         self.shutdownWhenDone = not args.a
@@ -186,7 +186,7 @@ class borgBackup:
 
 if __name__ == "__main__":
     parser = ArgumentParser(description="BorgBackUp sceduler and setup.")
-    parser.add_argument("repopath", default=["/disk1"], metavar="RepoPath", nargs=1, help="Specify where the repos are stored.")
+    parser.add_argument("-r", "-repopath", default="/disk1", help="Specify where the repos are stored.")
     parser.add_argument("-b", "-borgpath", default="/bin/borg", help="Specify where borg is located.")
     parser.add_argument("-a", "-awake", action="store_true", help="Prohibit shutdown of the system after the next backup has completed.")
     parser.add_argument("-t", "-test", action="store_true", help="Test this script, no changes will be made.")

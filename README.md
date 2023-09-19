@@ -1,11 +1,13 @@
 # BorgBackup
 
-## Installation
+This is a simple python script that runs Borg create on selected intevals.
 
-```Bash
-git clone https://github.com/HandyGold75/BorgBackup
-cd ./BorgBackup
-docker build --pull --rm -f "Dockerfile" -t borgbackup:latest "."
-rm -r -f ../Borgbackup
-cd ../
-```
+## Requirements
+
+* Borg Backup ([Borg backup](https://www.borgbackup.org/)).
+* 1 or more initialized repository(s) ([Quickstart](https://borgbackup.readthedocs.io/en/stable/quickstart.html)).
+
+## Set up
+
+* Run BorgBackup.py once.
+* In BorgBackup.json configure your repos.
